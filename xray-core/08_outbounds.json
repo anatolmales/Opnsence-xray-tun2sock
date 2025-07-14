@@ -1,0 +1,51 @@
+{
+    "outbounds": [
+        {
+            "tag": "proxy",
+            "protocol": "vless",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "*.*.*.*",
+                        "port": 45932,
+                        "users": [
+                            {
+                                "id": "dfgdrc-8f4334538-47545da-d03458a-a2b38e72b16b",
+                                "flow": "",
+                                "encryption": "none",
+                                "level": 0
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "tcp",
+                "security": "reality",
+                "realitySettings": {
+                    "publicKey": "sdfdfsgsdfgdg",
+                    "fingerprint": "chrome",
+                    "serverName": "dfgfdfg.com",
+                    "shortId": "",
+                    "spiderX": "/"
+                },
+                "sockopt": {
+                "domainStrategy": "ForceIPv4"
+                }
+            }
+        },
+        {
+            "tag": "direct",
+            "protocol": "freedom"
+        },
+        {
+            "tag": "block",
+            "protocol": "blackhole",
+            "settings": {
+                "response": {
+                    "type": "http"
+                }
+            }
+        }
+    ]
+}

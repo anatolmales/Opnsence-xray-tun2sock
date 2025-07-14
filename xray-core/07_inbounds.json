@@ -1,0 +1,25 @@
+{
+  "inbounds": [
+    {
+      "tag": "socks",
+      "port": 2080,
+      "protocol": "socks",
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "ip": "127.0.0.1",
+        "ip": "192.168.1.1"
+      },
+      "streamSettings": {
+        "sockopt": {
+          "tproxy": "tproxy"
+        }
+      },
+      "sniffing": {
+        "enabled": true,
+        "routeOnly": true,
+        "destOverride": ["http", "tls"]
+      }
+    }
+  ]
+}

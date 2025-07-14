@@ -1,0 +1,15 @@
+{
+  "dns": {
+    "servers": [
+      "fakedns",
+      "8.8.8.8"
+    ],
+    "queryStrategy": "UseIPv4"
+  },
+  "fakedns": [
+    {
+      "ipPool": "198.18.0.0/16",
+      "poolSize": 65535
+    }
+  ]
+}

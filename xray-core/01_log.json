@@ -1,0 +1,11 @@
+// Настройки журнала — что и куда записывать в журнал.
+
+{
+    "log": 
+	{
+	    "access": "/var/log/xray-core/access.log",     // Запись доступа
+	    "error": "/var/log/xray-core/error.log",       // Запись ошибок
+	    "loglevel": "info",    // Уровень журнала: от минимального до максимального: "none", "error", "warning", "info", "debug"
+	    "dnsLog": true		// Включить / Выключить отслеживание DNS запросов: false, true
+	}
+}

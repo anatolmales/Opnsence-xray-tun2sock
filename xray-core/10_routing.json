@@ -1,0 +1,85 @@
+{
+  "routing": {
+    "rules": [
+      {
+        "type": "field",
+        "inboundTag": [
+          "api"
+        ],
+        "outboundTag": "api"
+      },
+      //блокировка рекламы
+      {
+        "type": "field",
+        "outboundTag": "block",
+        "domain": [
+          "geosite:category-ads-all"
+        ]
+      },
+      // Правило для российских доменов (прямое подключение)
+      {
+        "type": "field",
+        "inboundTag": ["socks"],
+        "outboundTag": "direct",
+        "domain": [
+          "regexp:^([\\w\\-\\.]+\\.)(ru|su|xn--p1ai|xn--p1acf|xn--80asehdb|xn--c1avg|xn--80aswg|xn--80adxhks|moscow|xn--d1acj3b|pro)$",
+          "domain:yandex.ru",
+          "domain:mail.ru",
+          "domain:vk.com"
+        ]
+      },
+      
+      // Правило для специфичных доменов (через прокси)
+      {
+        "type": "field",
+        "inboundTag": ["socks"],
+        "outboundTag": "proxy",
+        "domain": [
+          "domain:browserleaks.com",
+          "domain:nperf.com",
+          "domain:nnmclub.to",
+          "domain:rutracker.org"
+        ]
+      },
+      {
+        "type": "field",
+        "outboundTag": "proxy",
+        "ip": [
+          "geoip:ru-blocked"
+        ]
+      },
+      // через прокси
+      {
+        "type": "field",
+        "outboundTag": "proxy",
+        "domain": [
+          "geosite:ru-blocked",
+          "domain:discord.com",
+          "domain:mikrotik.com"
+        ]
+      },
+      // Правило для торрент-трафика (прямое подключение)
+      {
+        "type": "field",
+        "inboundTag": ["socks"],
+        "outboundTag": "direct",
+        "protocol": ["bittorrent"]
+      },
+      
+      // Правило для IP-адресов (через прокси)
+      {
+        "type": "field",
+        "inboundTag": ["socks"],
+        "outboundTag": "proxy",
+        "ip": [ ]
+      },
+      
+      // Финальное правило (по умолчанию)
+      {
+        "type": "field",
+        "inboundTag": ["socks"],
+        "outboundTag": "proxy"
+      }
+    ]
+  }
+}
