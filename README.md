@@ -65,21 +65,22 @@ tun2socks_start() {
 run_rc_command "$1"
 ```
 
-Разрешение на запуск и автозагрузку:
+###Разрешение на запуск:
 
 ```sh
 chmod +x /usr/local/etc/rc.d/tun2socks
-
+```
+###Автозапуск:
+```sh
 echo 'tun2socks_enable="YES"' > /etc/rc.conf.d/tun2socks
 ```
 
-Создайте файл запуска при старте:
-/usr/local/etc/rc.syshook.d/early/40-tun2socks 
+Создайте файл запуска при старте: '/usr/local/etc/rc.syshook.d/early/40-tun2socks '
 ```sh
 #!/bin/sh
 
 # Start tun2socks service
-/usr/local/etc/rc.d/tun2socks start
+/usr/local/etc/rc.d/tun2socks restart
 
 ```
 
@@ -206,10 +207,13 @@ load_rc_config "$name"
 run_rc_command "$1"
 ```
 
-Разрешение на запуск и автозагрузка:
+### Разрешение на запуск:
 
 ```sh
 chmod +x /usr/local/etc/rc.d/xray
+```
+### Автозапуск
+```sh
 echo 'xray_enable="YES" ' > /etc/rc.conf.d/xray
 ```
 
@@ -219,7 +223,7 @@ echo 'xray_enable="YES" ' > /etc/rc.conf.d/xray
 #!/bin/sh
 
 # Start x2ray service
-/usr/local/etc/rc.d/x2ray start
+/usr/local/etc/rc.d/x2ray restart
 
 ```
 
