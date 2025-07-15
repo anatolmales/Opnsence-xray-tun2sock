@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# Start xray service
+/usr/local/etc/rc.d/xray restart
+
