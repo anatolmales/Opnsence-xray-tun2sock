@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# Start tun2socks service
+/usr/local/etc/rc.d/tun2socks start
