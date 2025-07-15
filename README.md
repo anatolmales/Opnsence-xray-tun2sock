@@ -20,7 +20,7 @@ chmod +x /usr/local/etc/tun2socks/tun2socks
 
 ```yaml
 loglevel: info
-proxy: socks5://192.168.3.10:7891
+proxy: socks5://192.168.1.1:2080
 device: tun://tun2socks0
 mtu: 1500
 udp-timeout: 120s
