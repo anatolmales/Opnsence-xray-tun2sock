@@ -1,4 +1,4 @@
-### Автоустановка. Останется только в Гуй прописать
+### Автоустановка. Остаётся настроить через ВебМорду cron, шлюз и нат
 ```sh
 fetch -o - https://github.com/anatolmales/Opnsence-xray-tun2sock/raw/refs/heads/main/install.sh | sh
 ```
