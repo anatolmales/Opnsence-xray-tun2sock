@@ -1,6 +1,11 @@
+### Автоустановка. Останется только в Гуй прописать
+```sh
+fetch -o - https://github.com/anatolmales/Opnsence-xray-tun2sock/raw/refs/heads/main/install.sh | sh
+```
+
 ---
 
-# 🧪 Настройка tun2socks и xray на OPNsense
+# 🧪 Ручная Настройка tun2socks и xray на OPNsense
 
 ## 1. Установка и настройка tun2socks
 
