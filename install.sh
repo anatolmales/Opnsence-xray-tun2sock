@@ -49,7 +49,7 @@ setup_tun2socks() {
     fetch -q -o /usr/local/etc/rc.d/tun2socks https://github.com/anatolmales/Opnsence-xray-tun2sock/raw/refs/heads/main/tun2sock/tun2socks
     fetch -q -o /usr/local/opnsense/service/conf/actions.d/actions_tun2socks.conf https://github.com/anatolmales/Opnsence-xray-tun2sock/raw/refs/heads/main/tun2sock/actions_tun2socks.conf
     fetch -q -o /usr/local/etc/inc/plugins.inc.d/tun2socks.inc https://github.com/anatolmales/Opnsence-xray-tun2sock/raw/refs/heads/main/tun2sock/tun2socks.inc
-    fetch -q -o /usr/local/etc/rc.syshook.d/early/40-tun2socks https://github.com/anatolmales/Opnsence-xray-tun2sock/raw/refs/heads/main/tun2sock/40-tun2socks
+    fetch -q -o /usr/local/etc/rc.syshook.d/start/91-tun2socks https://github.com/anatolmales/Opnsence-xray-tun2sock/raw/refs/heads/main/tun2sock/91-tun2socks
 
     # 🧩 Настройка службы и автозапуска
     log_message "Настройка службы и автозапуска tun2socks"
@@ -71,7 +71,7 @@ setup_xray() {
     fetch -q -o /usr/local/etc/rc.d/xray https://github.com/anatolmales/Opnsence-xray-tun2sock/raw/refs/heads/main/xray/xray
     fetch -q -o /usr/local/opnsense/service/conf/actions.d/actions_xray.conf https://github.com/anatolmales/Opnsence-xray-tun2sock/raw/refs/heads/main/xray/actions_xray.conf
     fetch -q -o /usr/local/etc/inc/plugins.inc.d/xray.inc https://github.com/anatolmales/Opnsence-xray-tun2sock/raw/refs/heads/main/xray/xray.inc
-    fetch -q -o /usr/local/etc/rc.syshook.d/early/41-xray https://github.com/anatolmales/Opnsence-xray-tun2sock/raw/refs/heads/main/xray/41-xray
+    fetch -q -o /usr/local/etc/rc.syshook.d/start/91-xray https://github.com/anatolmales/Opnsence-xray-tun2sock/raw/refs/heads/main/xray/91-xray
     fetch -q -o /usr/local/etc/xray-core/update-xray.sh https://github.com/anatolmales/Opnsence-xray-tun2sock/raw/refs/heads/main/xray-core/update-xray.sh
 
     # ⚙️ Настройка службы и автозапуска
