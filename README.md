@@ -78,7 +78,7 @@ chmod +x /usr/local/etc/rc.d/tun2socks
 echo 'tun2socks_enable="YES"' > /etc/rc.conf.d/tun2socks
 ```
 
-Создайте файл запуска при старте: '/usr/local/etc/rc.syshook.d/early/40-tun2socks '
+Создайте файл запуска при старте: '/usr/local/etc/rc.syshook.d/start/91-tun2socks '
 ```sh
 #!/bin/sh
 
@@ -220,7 +220,7 @@ chmod +x /usr/local/etc/rc.d/xray
 echo 'xray_enable="YES" ' > /etc/rc.conf.d/xray
 ```
 
-Файл автозапуска `/usr/local/etc/rc.syshook.d/early/41-xray`:
+Файл автозапуска `/usr/local/etc/rc.syshook.d/start/91-xray`:
 
 ```sh
 #!/bin/sh
