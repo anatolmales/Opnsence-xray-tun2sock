@@ -78,7 +78,7 @@ chmod +x /usr/local/etc/rc.d/tun2socks
 echo 'tun2socks_enable="YES"' > /etc/rc.conf.d/tun2socks
 ```
 
-Создайте файл запуска при старте: '/usr/local/etc/rc.syshook.d/start/91-tun2socks '
+Создайте файл запуска при старте: '/usr/local/etc/rc.syshook.d/early/50-tun2socks'
 ```sh
 #!/bin/sh
 
