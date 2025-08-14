@@ -49,12 +49,13 @@ setup_tun2socks() {
     fetch -q -o /usr/local/etc/rc.d/tun2socks https://github.com/anatolmales/Opnsence-xray-tun2sock/raw/refs/heads/main/tun2sock/tun2socks
     fetch -q -o /usr/local/opnsense/service/conf/actions.d/actions_tun2socks.conf https://github.com/anatolmales/Opnsence-xray-tun2sock/raw/refs/heads/main/tun2sock/actions_tun2socks.conf
     fetch -q -o /usr/local/etc/inc/plugins.inc.d/tun2socks.inc https://github.com/anatolmales/Opnsence-xray-tun2sock/raw/refs/heads/main/tun2sock/tun2socks.inc
-    fetch -q -o /usr/local/etc/rc.syshook.d/start/91-tun2socks https://github.com/anatolmales/Opnsence-xray-tun2sock/raw/refs/heads/main/tun2sock/91-tun2socks
+    fetch -q -o /usr/local/etc/rc.syshook.d/early/50-tun2socks https://github.com/anatolmales/Opnsence-xray-tun2sock/raw/refs/heads/main/tun2sock/50-tun2socks
+
 
     # 🧩 Настройка службы и автозапуска
     log_message "Настройка службы и автозапуска tun2socks"
     chmod +x /usr/local/etc/rc.d/tun2socks # Даем права на исполнение rc скрипту
-    chmod +x /usr/local/etc/rc.syshook.d/early/40-tun2socks # Даем права на исполнение syshook
+    chmod +x /usr/local/etc/rc.syshook.d/early/50-tun2socks # Даем права на исполнение syshook
     echo 'tun2socks_enable="YES"' > /etc/rc.conf.d/tun2socks # Включаем автозапуск службы
 }
 
